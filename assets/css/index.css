@@ -16,23 +16,43 @@ nav {
 }
 
 h1 {
-  font-family: PT Sans Narrow;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-weight: bold;
   font-size: 1.875em;
   color: #323232;
 }
 
 h2 {
-  font-family: PT Sans Narrow;
+  font-family: 'PT Sans Narrow', sans-serif;
   font-weight: bold;
   font-size: 1.5em;
   color: #00897f;
   text-transform: uppercase;
 }
 
+h3 {
+  font-family: 'PT Serif', serif;
+  font-size: 1em;
+  line-height: 2em;
+  color: #323232;
+}
+
 p {
-  font-family: PT Serif;
+  font-family: 'PT Serif', serif;
   font-size: .875em;
   line-height: 1.75em;
+  color: #323232;
+}
+
+a {
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
+  font-size: 1em;
+  color: #f26522;
+}
+
+nav h1 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
   color: #323232;
 }
