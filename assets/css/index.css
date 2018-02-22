@@ -10,3 +10,29 @@ body {
 /* On devices wider than 940px */
 @media(min-width: 940px) {
 }
+
+nav {
+  height: 80px
+}
+
+h1 {
+  font-family: PT Sans Narrow;
+  font-weight: bold;
+  font-size: 1.875em;
+  color: #323232;
+}
+
+h2 {
+  font-family: PT Sans Narrow;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #00897f;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: PT Serif;
+  font-size: .875em;
+  line-height: 1.75em;
+  color: #323232;
+}
