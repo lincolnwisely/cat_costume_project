@@ -11,6 +11,7 @@ body {
 @media(min-width: 940px) {
 }
 
+
 nav {
   height: 80px
 }
@@ -20,6 +21,8 @@ h1 {
   font-weight: bold;
   font-size: 1.875em;
   color: #323232;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 h2 {
@@ -28,6 +31,8 @@ h2 {
   font-size: 1.5em;
   color: #00897f;
   text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 h3 {
@@ -35,6 +40,8 @@ h3 {
   font-size: 1em;
   line-height: 2em;
   color: #323232;
+  width: 60%;
+  margin: auto;
 }
 
 p {
@@ -42,6 +49,7 @@ p {
   font-size: .875em;
   line-height: 1.75em;
   color: #323232;
+  text-align: left;
 }
 
 a {
@@ -49,10 +57,119 @@ a {
   font-weight: bold;
   font-size: 1em;
   color: #f26522;
+  display: inline-block;
 }
 
 nav h1 {
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: bold;
   color: #323232;
+  display: inline-block;
+  float: left;
+  margin: 20px 0 0 20px;
+}
+
+nav p {
+  font-family: 'PT Sans Regular', sans-serif;
+  font-size: .9em;
+  color: #323232;
+  display: inline-block;
+  text-align: right;
+  float: right;
+  margin: 30px 30px 0 0;
+}
+
+div h1 {
+  padding: 60px 0 25px 0;
+}
+
+footer h1 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #323232;
+  margin: 0;
+  color: white;
+  text-align: center;
+  line-height: 125px;
+}
+
+.splash img {
+  width: 100%;
+}
+
+.about {
+  background-color: #eeeeee;
+  padding: 30px;
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+div .about {
+  margin: 45px 60px auto;
+  transform: translate(50%, 0%);
+}
+
+.cats{
+  margin-right: 15%;
+  margin-left: 15%;
+  padding-left: 40px;
+  padding-right: 10px;
+}
+
+.circles {
+  margin: 80px 55px auto;
+  display: inline-block;
+
+}
+
+div .circles img {
+  border-radius: 50%;
+}
+
+div #info {
+  background-color: #eeeeee;
+  padding-bottom: 80px;
+}
+
+.contact {
+  background-color: white;
+  padding: 30px;
+  width: 25%;
+  display:inline-block;
+  vertical-align: top;
+}
+
+div .contact{
+  margin: 0 60px auto;
+  transform: translate(50%, 0%);
+}
+
+.address {
+  margin: auto;
+  width: 60%;
+}
+
+.address h3 {
+  width: auto;
+  float: left;
+}
+
+a {
+  margin: 4px 0 0 8px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.map img {
+  display: inline-block;
+  width: 100%;
+}
+
+footer {
+  height: 125px;
+  background-color: #00897f;
 }
