@@ -98,24 +98,27 @@ footer h1 {
   width: 100%;
 }
 
+.boxes {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 .about {
   background-color: #eeeeee;
   padding: 30px;
   width: 25%;
   display: inline-block;
   vertical-align: top;
-}
-
-div .about {
-  margin: 45px 60px auto;
-  transform: translate(50%, 0%);
+  margin: 30px;
 }
 
 .cats{
   margin-right: 15%;
   margin-left: 15%;
-  padding-left: 40px;
-  padding-right: 10px;
+  margin-bottom: 80px;
+  display:flex;
+  justify-content: space-around;
 }
 
 .circles {
@@ -137,13 +140,9 @@ div #info {
   background-color: white;
   padding: 30px;
   width: 25%;
-  display:inline-block;
+  display: inline-block;
   vertical-align: top;
-}
-
-div .contact{
-  margin: 0 60px auto;
-  transform: translate(50%, 0%);
+  margin: 30px;
 }
 
 .address {
@@ -172,4 +171,22 @@ a:link {
 footer {
   height: 125px;
   background-color: #00897f;
+}
+
+@media screen and (max-width: 1020px) and (min-width: 801px){
+  .cats {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px){
+  .boxes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about {
+    width: 100%;
+    margin: 0;
+  }
 }
