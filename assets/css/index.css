@@ -5,10 +5,12 @@ body {
 
 /* On devices wider than 660px */
 @media(min-width: 660px) {
+
 }
 
 /* On devices wider than 940px */
 @media(min-width: 940px) {
+
 }
 
 
@@ -134,6 +136,7 @@ div .circles img {
 div #info {
   background-color: #eeeeee;
   padding-bottom: 80px;
+  width: 100%;
 }
 
 .contact {
@@ -179,18 +182,48 @@ footer {
   }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 659px){
+  nav h1{
+
+  }
+  nav p{
+    display: none;
+  }
+
   .boxes {
     display: flex;
     flex-direction: column;
+    width: 90%
   }
 
   .about {
     width: 100%;
-    margin: 0;
+    margin: 0px;
   }
+
+  #info h1 {
+    display: none;
+  }
+
   .contact {
     width: 100%;
-    margin: 0;
+    margin: 0px;
+    padding: 0;
+    background-color: #eeeeee;
   }
+
+  #cathat {
+    display: none;
+  }
+
+  #catglasses {
+    display: none;
+  }
+
+  #catcollar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 }
