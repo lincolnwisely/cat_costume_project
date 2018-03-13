@@ -173,7 +173,7 @@ footer {
   background-color: #00897f;
 }
 
-@media screen and (max-width: 1020px) and (min-width: 801px){
+@media screen and (max-width: 1020px) {
   .cats {
     display: block;
   }
@@ -186,6 +186,10 @@ footer {
   }
 
   .about {
+    width: 100%;
+    margin: 0;
+  }
+  .contact {
     width: 100%;
     margin: 0;
   }
