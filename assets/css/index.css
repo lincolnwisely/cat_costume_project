@@ -42,8 +42,14 @@ h3 {
   font-size: 1em;
   line-height: 2em;
   color: #323232;
-  width: 60%;
+  /*width: 60%;*/
+  /* Rather than giving all h3s a width of 60%, it would be better to apply any specific widths on a case-by-case basis. So you can declare the generic styles above, then add additional styles to specific sections. E.g. the opening h3 section on Main. (see below!)'*/
   margin: auto;
+}
+
+.main h3 {
+  width: 60%;
+  /* You wrapped your main content in a [div class="main"], which is GREAT! But you're not using that selector. So this is a great opportunity to use it for a specific h3. */
 }
 
 p {
@@ -146,20 +152,33 @@ div #info {
   display: inline-block;
   vertical-align: top;
   margin: 30px;
+  padding: 30px;
+  /* Instead of giving each of your h3s a width of 60%, you can add padding to create white space. This will allow you to fit both the address label + address in the same line. Before, the width of 60% was pushing the <a> tag to the line below. */
+}
+
+.contact h3 {
+  width: 100%;
+  /* Without this, the earlier '.main h3' declaration will give this a 60% width style.*/
 }
 
 .address {
   margin: auto;
-  width: 60%;
+  /*width: 60%; --- Same reasoning as line above */
 }
 
 .address h3 {
   width: auto;
   float: left;
+  display: inline-block;
+  /* making this display inline-block (as well as the .address a), the text can fit on the same line */
+
 }
 
-a {
+.address a {
   margin: 4px 0 0 8px;
+  display: inline-block;
+  /* Similar to the h3 - it totally works here, but this page is unique in having only one link. Providing more specificity would prevent you from giving all links (if there were any) that margin. */
+  /* ALSO - by making this display inline-block (as well as the .address h3), the text can fit on the same line */
 }
 
 a:link {
@@ -168,6 +187,7 @@ a:link {
 
 .map img {
   display: inline-block;
+  /* just fyi - images are inline-block by default, so you could remove this */
   width: 100%;
 }
 
@@ -190,15 +210,37 @@ footer {
     display: none;
   }
 
+ div h1 {
+   /* For consistency (matching the about and contact boxes) reduce the white space on mobile. Let's go with 90%. Tends to be easier to manage than padding. */
+   width: 90%;
+   margin: 20px auto;
+   padding: 0;
+   font-size: 26px;
+ }
+
+  .main h3 {
+    /* For consistency (matching the about and contact boxes) reduce the white space on mobile */
+    width: 90%;
+  }
+
   .boxes {
     display: flex;
     flex-direction: column;
-    width: 90%
+    /*width: 90%;*/
+    width: 100%;
+    /* Look at the padding on mobile. Causes horizontal scroll. I would recommend stretching .boxes to 100%, changing .about to 90%. Then you don't need padding. You'll also need to add the background color since there's no longer white behind the boxes. */
+    /* Add padding on mobile */
+    background-color: #eee;
   }
 
-  .about {
-    width: 100%;
-    margin: 0px;
+  .about, .contact {
+    /*remove padding*/
+    padding: 0;
+    /*width: 100%;*/
+    width: 90%;
+    /* don't forget margin:auto! */
+    margin: auto;
+    margin: 0px auto;
   }
 
   #info h1 {
@@ -206,11 +248,26 @@ footer {
   }
 
   .contact {
-    width: 100%;
+    /*width: 100%;
     margin: 0px;
-    padding: 0;
+    padding: 0;*/
+    /* Already declared with .about, yay! */
     background-color: #eeeeee;
   }
+
+  .contact h3 {
+    /* Weird little thing.... so because CSS files are 'cascading, the last declaration in the file is applied. So the '.main h3' style in your media query overrides your desktop-version .contact h3 style. So we need a redundant declaration. (line 160)*/
+    width: 100%;
+  }
+
+  .address h3 {
+    /* but then you need to prevent the 'address' label from taking up 100% width. */
+    width: auto;
+  }
+
+
+  /* Now when you scroll up on mobile, you see a consistent width between the screen edge and content */
+
 
   #cathat {
     display: none;
@@ -225,5 +282,5 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  
+
 }
